@@ -40,7 +40,7 @@ extension Request {
             
             guard let _ = data else {
                 let failureReason = "Data could not be serialized. Input data was nil."
-                let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
+                let error = AlamofireError.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
             
@@ -59,7 +59,7 @@ extension Request {
             }
 
             let failureReason = "ObjectMapper failed to serialize response."
-            let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
+            let error = AlamofireError.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
             return .Failure(error)
         }
     }
@@ -109,7 +109,7 @@ extension Request {
             
             guard let _ = data else {
                 let failureReason = "Data could not be serialized. Input data was nil."
-                let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
+                let error = AlamofireError.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
                 return .Failure(error)
             }
             
@@ -128,7 +128,7 @@ extension Request {
             }
             
             let failureReason = "ObjectMapper failed to serialize response."
-            let error = Error.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
+            let error = AlamofireError.errorWithCode(.DataSerializationFailed, failureReason: failureReason)
             return .Failure(error)
         }
     }
