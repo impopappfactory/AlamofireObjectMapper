@@ -27,12 +27,12 @@
 //  THE SOFTWARE.
 
 import Foundation
-import Alamofire
-import ObjectMapper
+//import Alamofire
+//import ObjectMapper
 
 extension Request {
     
-    internal static func newError(code: Error.Code, failureReason: String) -> NSError {
+    internal static func newError(code: AlamofireError.Code, failureReason: String) -> NSError {
         let errorDomain = "com.alamofireobjectmapper.error"
         
         let userInfo = [NSLocalizedFailureReasonErrorKey: failureReason]
